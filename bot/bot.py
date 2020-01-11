@@ -29,7 +29,7 @@ from start_bot import start_bot
 def mamalo(bot, update, args, job_queue):
     """Handler for the /start command"""
     chat = update.message.chat
-    bot.sendMessage(chat.id,text="Mamalo {args}".format(args = args[0]))
+    bot.sendMessage(chat.id,text="Mamalo {}".format(args[0]))
 
 # Add all handlers to the dispatcher and run the bot
 dispatcher.add_handler(CommandHandler('mamalo', mamalo, pass_args=True, pass_job_queue=True))
