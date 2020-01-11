@@ -102,8 +102,7 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-.envServer
-.envBot
+.env
 
 # Spyder project settings
 .spyderproject
@@ -122,3 +121,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# VSCode
+.vscode

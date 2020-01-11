@@ -1,2 +1,2 @@
-. .envBot/bin/activate
-python3 manage.py runserver
+. .env/bin/activate
+python3 ./bot/bot.py
