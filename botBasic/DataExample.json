@@ -1,0 +1,69 @@
+{
+	"circle":{
+		"created":{
+			"by":"userId",
+			"date":"date"
+		},
+		"projects":[
+			{
+				"Private":false,
+				"created":{
+					"by":"userId",
+					"date":"date"
+				},
+				"tasks":[
+					{
+						"title":"task title",
+						"description":"",
+						"assigned": "userId",
+						"created":{
+							"by":"userId",
+							"date":"date"
+						},
+						"date":"date",
+						"collaborators":[
+							"userId"
+						],
+						"subtasks":[
+							{
+								"task":"title",
+								"completed":false
+							}
+						],
+						"completed":false
+					}
+				],
+				"type":"list|table"
+
+			}
+		],
+		"users":[
+			{
+				"id":"userId",
+				"name":"name",
+				"tasks":[
+					{
+						"title": "task title",
+						"description": "",
+						"assigned": "userId",
+						"created": {
+							"by": "userId",
+							"date": "date"
+						},
+						"date": "date",
+						"collaborators":[
+							"userId"
+						],
+						"subtasks":[
+							{
+								"task":"title",
+								"completed":false
+							}
+						],
+						"completed":false
+					}
+				]
+			}
+		]
+	}
+}

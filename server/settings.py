@@ -40,7 +40,11 @@ INSTALLED_APPS = [
 	'django.contrib.staticfiles',
 
 	# Locla Apps
-	'tasks'
+	'bot',
+	'tasks',
+	'users',
+	'projects',
+	'workgroup',
 ]
 
 MIDDLEWARE = [
@@ -54,6 +58,12 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'server.urls'
+
+TELEGRAM = {
+	'bot_token':
+		"1001187521:AAE2x3qqdYGDJMyFWzK5uIRwp4dsim4oYxI",
+  'bot_name': 'Tasks App',
+}
 
 TEMPLATES = [
 	{

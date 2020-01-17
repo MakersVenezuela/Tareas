@@ -1,15 +1,22 @@
-""" Tasks Models. """
+""" Tasks Models """
 
 from django.db import models
+from users.models import User
 
-class User(models.Model):
-	""" User model. """
-	email = models.EmailField(unique=True)
-	password = models.CharField(max_length=100)
-	first_name = models.CharField(max_length=100)
-	last_name = models.CharField(max_length=100)
-	t_first_name = models.CharField(max_length=100)
-	t_last_name = models.CharField(max_length=100)
-	t_username = models.CharField(max_length=100)
-	
-	created = models.DateTimeField(auto_now_add=True)
+class Task(models.Model):
+	""" Tasks model """
+	user = models.ForeignKey(User,on_delete=models.CASCADE)
+	title = models.CharField(max_length=100)
+	state = models.CharField(max_length=100)
+	cDate = models.DateField(verbose_name="Created date")
+	fDate = models.DateField(verbose_name="Finished date")
+	description = models.TextField(max_length=500)
+
+class SubTask(models.Model):
+	""" Tasks model """
+	father = models.ForeignKey(Task,on_delete=models.CASCADE)
+	title = models.CharField(max_length=100)
+	state = models.CharField(max_length=100)
+	cDate = models.DateField(verbose_name="Created date")
+	fDate = models.DateField(verbose_name="Finished date")
+	description = models.TextField(max_length=500)
